@@ -53,5 +53,46 @@
             </nav>
         </div>
     </header>      
-    <!---end navigation bar--->
+<!---end navigation bar--->
+
+<!--start Landscape and education-->
+<div class="header_bg">
+  <header class="header__container">
+    <div class="header__content">
+      <h1 class="animate__animated animate__backInLeft">Are you ready<br />to change the <span>landscape of education</span> with LearnHyve?</h1>
+      <p>
+        Discover a dynamic gamified learning platform that equips students 
+        with advanced tools, essential life and soft skills, 
+        a vibrant community, and hands-on experiences. Unlock a new way of learning with Learnhyve!
+      </p>
+      <form class="container-center" action="https://docs.google.com/forms/d/e/1FAIpQLSfWaI-stPzalGTIJoHzqGN70AWUwsPGpEEQLYoS1KmLO34SHg/viewform">
+        <button type="submit">Enroll Now</button>
+      </form>
+    </div>
+    <div class="header__image">
+      <div class="header__image__card header__image__card-1">
+        <span><i class="fas fa-comments icon"></i></span>
+        <div class="animate__animated animate__bounceIn">Communication Skill</div>
+      </div>
+      <div class="header__image__card header__image__card-2">
+        <span><i class="fas fa-dollar-sign icon"></i></span>
+        <div class="animate__animated animate__bounceIn">Money Management</div>
+      </div>
+      <div class="header__image__card header__image__card-3">
+        <span><i class="fas fa-lightbulb icon"></i></span>
+        <div class="animate__animated animate__bounceIn">StartUp And Entrepreneurship</div>
+      </div>
+      <div class="header__image__card header__image__card-4">
+        <span><i class="fas fa-chart-line icon"></i></span>
+        <div class="animate__animated animate__bounceIn">Stock Market And Trading</div>
+      </div>
+      <div class="header__image__card header__image__card-5">
+        <span><i class="fas fa-plus-circle"></i></span>
+        <div class="animate__animated animate__bounceIn">And Many More</div>
+      </div>
+      <img src="students3.png" alt="header" />
+    </div>
+  </header>
+</div>
+<!---end Landscape and education-->
 
