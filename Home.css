@@ -1385,3 +1385,689 @@ input[type="text"] {
   }
 }
 /*----end of skills challenges--*/
+
+/*--star-why learnhyve--*/
+/* Container */
+.standout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  background-color: rgba(37, 99, 235, 0.075);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px 15px 0px;
+}
+
+/* Shapes Container */
+.shapes-standout {
+  position: relative;
+  width:100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Shapes */
+.shape {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #f0a989, #92f5cc);
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shape-1 {
+  top: 10%;
+  left: 35%;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.shape-2 {
+  top: 50%;
+  left: 60%;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.shape-3 {
+  bottom: 10%;
+  right: 45%;
+  background: linear-gradient(135deg, #df45df, #a6c1ee);
+}
+
+.shape-4 {
+  bottom: 30%;
+  left: 10%;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+.shape-5 {
+  bottom: 50%;
+  left: 20%;
+  background: linear-gradient(135deg, #65f685, #9785fd);
+}
+.shape-6 {
+  top: 25%;
+  left: 55%;
+  background: linear-gradient(135deg, #e5f36b, #93cc98);
+}
+.shape h4{
+  text-align:center;
+   padding: 23px;
+}
+/* Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+.bounce.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.bounce.delay-2 {
+  animation-delay: 1s;
+}
+
+.bounce.delay-3 {
+  animation-delay: 1.5s;
+}
+
+.bounce.delay-4 {
+  animation-delay: 1.3s;
+}
+
+
+.bounce.delay-5 {
+  animation-delay: 1.2s;
+}
+.bounce.delay-6{
+  animation-delay: 0.8s;
+}
+
+/*---2part of why learn--*/
+.learn {
+  margin: 0;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  color: #333;
+}
+.container_learn {
+  max-width: 800px;
+  margin: 0 auto;
+}
+#h1 {
+  text-align: center;
+  color: #f58220;
+  font-weight: 900;
+  padding: 1%;
+  font-size: 50px; 
+  font-family: 'Comic Sans MS', cursive;
+}
+.block_learn {
+  background: rgb(248, 180, 248);
+  margin: 20px 0;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.block_learn:nth-child(2) {
+  background: rgb(163, 241, 163);
+}
+.block_learn:nth-child(3) {
+  background: rgb(165, 225, 247);
+}
+.icons {
+  font-size: 2rem;
+  color: #212121;
+  flex-shrink: 0;
+}
+#h2 {
+ font-size: 1.5rem;
+ color: #212121;
+ margin-bottom: 10px;
+}
+#p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #0f0f0f;
+}
+
+@media (max-width: 768px) {
+  
+  #h1 {
+    font-size: 40px;
+  }
+  .standout{
+    flex-direction: column;
+    padding: 35px 0 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .learn {
+    padding: 10px;
+  }
+
+  #h1 {
+    font-size: 30px;
+  }
+  .icons {
+    font-size: 1.5rem;
+  }
+
+  #h2 {
+    font-size: 1.2rem;
+  }
+
+  #p {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .learn{
+    width: 70% !important;
+  }
+  .shapes-standout{
+    width: 30% !important ;
+  }
+  #h1{
+    font-size: 50px;
+  }
+}
+/*--end why learnhyve--*/
+
+
+/*----start -Essential Life and Soft Skills---*/
+.skills-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: rgba(37, 99, 235, 0.075);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  gap: 40px;
+}
+
+.text-section {
+  width: 60%;
+  text-align: left;
+}
+
+.heading h1 {
+  line-height: 1.1;
+  font-size: 4rem;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.heading .highlight {
+  color: #f58220; 
+}
+
+.text p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 20px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInUp 2s 1s ease-out forwards;
+}
+
+/* Animation for fade in */
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+/* Animation for fade in up */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* General Styles */
+.slider-container {
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 65px;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: transform 0.5s;
+  height: 300px;
+  width: 300px;
+}
+
+.slider:hover .slide {
+  transform: scale(1);
+}
+
+.slider h1 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Individual Slide Backgrounds */
+.skill { background-color: #00B82A; }
+.money { background-color: #FF6161; }
+.startup { background-color: #6661FF; }
+.stock { background-color: #F5A640; }
+.more { background-color: #BC40F5; }
+
+/* Icons */
+.slide i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider Dots */
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+      flex-direction: column;
+      gap: 20px;
+      padding: 27px;
+  }
+
+  .text-section {
+      width: 100%;
+      text-align: center;
+  }
+
+  .heading h1 {
+      font-size: 2.5rem;
+  }
+
+  .text p {
+      font-size: 1.1rem;
+  }
+
+  .slider-container {
+      max-width: 100%;
+      width: 80%;
+  }
+}
+/* For screens with max-width 480px */
+@media (max-width: 480px) {
+.main-content {
+flex-direction: column;
+gap: 15px;
+padding: 20px;
+}
+
+.text-section {
+width: 100%;
+text-align: center;
+}
+
+.heading h1 {
+font-size: 2rem;
+}
+
+.text p {
+font-size: 1rem;
+}
+
+.slider-container {
+max-width: 90%;
+width: 95%;
+}
+}
+
+/* For screens with max-width: 768px */
+@media (max-width: 768px) {
+.slider-container {
+padding: 0 15px;
+}
+
+.slide {
+padding: 40px;
+font-size: 1.1rem;
+height: 220px;
+width: 280px;
+}
+
+.dot {
+width: 8px;
+height: 8px;
+}
+
+.slide i {
+font-size: 2rem;
+}
+
+.slider-dots {
+bottom: 10px;
+gap: 6px;
+}
+
+.slider h1 {
+font-size: 1.5rem;
+}
+}
+
+@media (max-width: 480px) {
+  
+  .skills-wrapper {
+    padding: 15px 20px;
+  }
+  .slider-container {
+      padding: 0 10px;
+  }
+
+  .slide {
+      padding: 31px;
+      font-size: 0.9rem;
+      height: 181px;
+      width: 250px;
+  }
+
+  .dot {
+      width: 5px;
+      height: 5px;
+  }
+
+  .slide i {
+      font-size: 1.8rem;
+  }
+
+  .slider-dots {
+      bottom: 5px;
+      gap: 4px;
+  }
+
+.slider  h1 {
+      font-size: 1.2rem;
+  }
+}
+/*---end of Essential Life and Soft Skills--*/
+
+/*-- start student testimation--*/
+ .testimonials
+ {
+ text-align: center;
+  background: #d87a1d;  
+ padding: 45px 10px;
+ }
+ .testimonials h2{
+  color:whitesmoke; 
+  font-size: 50px; 
+  margin-top: 20px;
+ }
+ .testimonials #p{
+  color: white; 
+  font-size: 16px;
+  max-width: 700px;
+  margin: 10px auto;
+ }
+ .card_align{
+  display: flex; 
+  justify-content: center; 
+  gap: 40px; 
+  margin: 20px auto;
+   max-width: 1000px; 
+  flex-wrap: wrap;
+ }
+ .std_test{
+  background: white; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;
+  max-width: 300px;
+ }
+ .imageflex { 
+  display: flex;
+ }
+ .profile-image{
+  border-radius: 50%; 
+  margin-bottom: 10px; 
+  width: 25%;
+  height: 25%;
+ }
+ .profile-name{
+  margin: 10px 0; 
+  font-size: 18px; 
+  padding-left: 1ch; 
+  padding-top: 0.5ch;
+ }
+ .std_test p{
+  font-size: 14px; 
+  line-height: 1.6;
+  padding-top: 10px;
+ }
+ .checked {
+  color: orange;
+}
+/* Media query for screens with max-width of 768px */
+@media (max-width: 768px) {
+  .testimonials h2 {
+    font-size: 35px;
+  }
+  .testimonials #p {
+    font-size: 15px;
+  }
+  .card_align {
+    gap: 20px;
+  }
+  .std_test {
+    max-width: 250px;
+    padding: 15px;
+  }
+  .profile-name {
+    font-size: 16px;
+  }
+  .std_test p {
+    font-size: 13px;
+  }
+}
+
+/* Media query for screens with max-width of 480px */
+@media (max-width: 480px) {
+  .testimonials h2 {
+    font-size: 28px;
+  }
+  .testimonials #p {
+    font-size: 14px;
+  }
+  .card_align {
+    flex-direction: column;
+    align-items: center;
+  }
+  .std_test {
+    max-width: 90%;
+    padding: 20px;
+  }
+  .profile-image {
+    width: 50px;
+    height: 50px;
+  }
+  .profile-name {
+    font-size: 14px;
+  }
+  .std_test p {
+    font-size: 12px;
+  }
+}
+/*---end student testimation--*/
+
+/*---start footer section--*/
+footer {
+  background-color: #f3f4f6;
+  color: #4a5568;
+}
+
+.foot-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 2rem;
+}
+
+.footer-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.foot-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+.foot-brand {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.foot-logo {
+  width: auto;
+  height: 4rem;
+}
+
+.brand-highlight {
+  color: #2d89ef;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-link {
+  display: block;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #2d89ef;
+}
+
+.footer-address {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.footer-contact {
+  color: #2d89ef;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.footer-contact:hover {
+  text-decoration: underline;
+}
+
+.foot-social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 0.875rem;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #2d89ef;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+}
+/*end footer section--*/
