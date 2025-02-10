@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnhyve - Innovative Features</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="Features.css" />
+    <script src="Features.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="logoblack.png" alt="">
+            </a>
+            <div class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="Features.html">Features</a>
+                <a href="worshop.html">Workshops</a>
+                <a href="blog.html">Blogs</a>
+                <a href="about.html">About</a>
+                <button onclick="window.location.href='contact.html';" class="contact-btn">Contact Us</button>
+            </div>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </nav>   
+    <!---end navigation bar--->
+  
+
+    <div class="relative pt-16 sm:pt-20 h-screen overflow-hidden">
+        <video id="heroVideo" class="hero-video" autoplay loop muted>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24 h-full flex items-center">
+            <div class="text-center w-full">
+                <h1
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-4 sm:mb-8">
+                    Explore Our
+                    <br />
+                    Innovative
+                    <br />
+                    <span class="text-orange-500 animate-fade-in">Features</span>
+                </h1>
+
+                <p class="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8 sm:mb-12">
+                    Unlock new features of essential practical skills including soft skills and
+                    interactive learning experiences with Learnhyve.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button id="joinNowBtn" class="btn btn-primary">
+                        Join Now
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <svg class="wave-bottom" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0 30L60 25C120 20 240 10 360 15C480 20 600 40 720 45C840 50 960 40 1080 35C1200 30 1320 30 1380 30L1440 30V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V30Z"
+                fill="white" />
+        </svg>
+    </div>
+
+    <div class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16">Our Key Features</h2>
+            <div id="features-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Features will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="testimonials-container" class="bg-gray-100 py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16">What Our Users Say</h2>
+            <div id="testimonial-carousel" class="relative">
+                <div id="testimonial-content" class="bg-white rounded-lg shadow-xl p-6 sm:p-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-12 sm:h-12 text-orange-500 mb-4"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M10 3H0v10h10V3zm14 0H14v10h10V3zM7 10H3V6h4v4zm14 0h-4V6h4v4zM7 7H3V3h4v4zm14 0h-4V3h4v4z" />
+                    </svg>
+                    <p id="testimonial-text" class="text-base sm:text-xl mb-6"></p>
+                    <div class="flex items-center">
+                        <img id="testimonial-avatar" src="" alt="" class="rounded-full mr-4 w-12 h-12">
+                        <div>
+                            <p id="testimonial-author" class="font-semibold"></p>
+                            <p id="testimonial-role" class="text-sm text-gray-600"></p>
+                        </div>
+                    </div>
+                </div>
+                <button id="prev-testimonial"
+                    class="absolute top-1/2 -left-4 sm:-left-8 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="next-testimonial"
+                    class="absolute top-1/2 -right-4 sm:-right-8 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-secondary">
+        <div class="foot-container">
+            <div class="footer-grid">
+                <!-- Brand and Description -->
+                <div>
+                    <a href="Features.html" class="foot-brand">
+                        <img class="foot-logo" src="logoblack.png" alt="learnhyve-logo" />
+                    </a>
+                    <p class="foot-description">
+                        Revolutionizing education for a skilled India. Join us in our mission to empower learners with
+                        essential real-world skills.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="Features.html" class="footer-link">Features</a></li>
+                        <li><a href="worshop.html" class="footer-link">Workshops</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <address class="footer-address">
+                        Kolkata,India<br>
+                        <a href="mailto:contact@learnhyve.com" class="footer-contact">contact@learnhyve.com</a><br>
+                        <a href="mailto:Support@learnhyve.com" class="footer-contact">Support@learnhyve.com</a>
+                    </address>
+                </div>
+                <!-- Social Media Links -->
+                <div>
+                    <h3 class="footer-heading">Follow Us</h3>
+                    <div class="foot-social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61561398463423" class="social-icon"
+                            target="_blank">Facebook</a>
+                        <a href="https://www.instagram.com/learnhyve_app/" class="social-icon"
+                            target="_blank">Instagram</a>
+                        <a href="https://x.com/learnhyve_app" class="social-icon" target="_blank">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> LearnHyve. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
