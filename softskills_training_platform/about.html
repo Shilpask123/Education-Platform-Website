@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHyve: Revolutionize Learning, Empower Futures</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        /* Navigation Styles */
+        .nav {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .logo span {
+            color: #ff6b1a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ff6b1a;
+        }
+
+        .contact-btn {
+            background: #f66518;
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            border: none;
+            font-weight: 650;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .contact-btn:hover {
+            background: #e85d0c;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Existing Styles... */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 2rem;
+            margin-top: 5rem;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .title {
+            color: #ff6b1a;
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .description {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #ff6b1a;
+            color: white;
+            border: none;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ff6b1a;
+            border: 2px solid #ff6b1a;
+        }
+
+        .stats {
+            display: flex;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            color: #ff6b1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .illustration {
+            flex: 1;
+            max-width: 500px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .illustration img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* History Section Styles */
+        .history-section {
+            max-width: 1300px;
+            margin: 6rem auto;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .history-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .history-subtitle {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .history-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .history-content::before,
+        .history-content::after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 100px;
+            background: #ff6b1a;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .history-content::before {
+            top: 0;
+        }
+
+        .history-content::after {
+            bottom: 0;
+        }
+
+        .team-section {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .team-badge {
+            background: #f0f0f0;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .team-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .team-description {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 1.5rem;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #ff6b1a;
+        }
+
+        .newsletter-section {
+            background: #e1621d;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .newsletter-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .newsletter-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .newsletter-button {
+            background: #0066ff;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .newsletter-button:hover {
+            background: #0052cc;
+        }
+
+        .newsletter-terms {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #f8f9fa;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .footer-logo img{
+            height: 40px;
+        }
+
+        .footer-logo span {
+            color: #ff6b1a;
+        }
+
+        .footer-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #ff6b1a;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stats {
+                justify-content: center;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .illustration {
+                order: -1;
+            }
+
+            .history-title {
+                font-size: 2.5rem;
+            }
+
+            .history-subtitle {
+                font-size: 1.8rem;
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .newsletter-title {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 968px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="logoblack.png" alt="">
+            </a>
+            <div class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="Features.html">Features</a>
+                <a href="worshop.html">Workshops</a>
+                <a href="blog.html">Blogs</a>
+                <a href="about.html">About</a>
+                <button onclick="window.location.href='contact.html';" class="contact-btn">Contact Us</button>
+            </div>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Discover LearnHyve:</h1>
+            <h2 class="subtitle">Revolutionize Learning,<br>Empower Futures</h2>
+            <p class="description">At LearnHyve, we have one clear, transformative mission: Revolutionizing Education for a Skilled India. Our vision is to bridge the gap between traditional education and essential real-world skills.</p>
+            
+            <div class="buttons">
+                <button class="btn btn-primary">Get Started</button>
+                <button class="btn btn-secondary">Learn More</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-icon">🎓</div>
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Students Trained</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Expert Mentors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="illustration">
+            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<dotlottie-player class="cl" src="https://lottie.host/1761bc12-3497-4a9b-a182-9410632e1d4a/o1GGh833EE.lottie" background="transparent" speed="1" style="width: 600px; height: 600px" loop autoplay></dotlottie-player>
+        </div>
+    </div>
+
+    <section class="history-section">
+        <h2 class="history-title">Our History</h2>
+        <h3 class="history-subtitle">The Story of LearnHyve</h3>
+        <div class="history-content">
+            <p>LearnHyve was born from a simple yet powerful idea: to bridge the gap between traditional education and essential real-world skills. Founded by a team of passionate educators and industry experts, we saw the need for a platform that offers hands-on, practical learning experiences in areas like entrepreneurship, communication, and financial literacy. At LearnHyve, we believe in inspiring and engaging students through interactive workshops, real-world projects, and a unique reward system. Our mission is to empower learners by providing the tools and recognition they need to succeed. Join us as we revolutionize education and build a more skilled and innovative future for India.</p>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="team-badge">Our Team</div>
+        <h2 class="team-title">Meet Our Root Builders</h2>
+        <p class="team-description">The visionaries behind LearnHyve who are dedicated to revolutionizing education in India.</p>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="Suprodip.png" alt="Team member" class="member-image">
+                <div class="member-info">
+                    <h3 class="member-name">Suprodip Bhattacharya</h3>
+                    <p class="member-role">Founder & CEO</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="sunnysir.jpg" alt="Team member" class="member-image">
+                <div class="member-info">
+                    <h3 class="member-name">Sunny Dudhrejiya</h3>
+                    <p class="member-role">Chief Technical Officer</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="ayshik.jpg" alt="Team member" class="member-image">
+                <div class="member-info">
+                    <h3 class="member-name">Ayshik Mondal</h3>
+                    <p class="member-role">Chief Marketing Officer</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2 class="newsletter-title">Stay Updated with LearnHyve</h2>
+            <p class="newsletter-description">Subscribe to our newsletter for the latest updates on courses, workshops, and educational insights.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email">
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+            <p class="newsletter-terms">By subscribing, you agree to our Terms of Service and Privacy Policy.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <a href="#" class="footer-logo">
+                    <img src="logoblack.png" alt="">
+                </a>
+                <p class="footer-description">Revolutionizing education for a skilled India. Join us in our mission to empower learners with essential real-world skills.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="Features.html">Features</a></li>
+                    <li><a href="worshop.html">Workshops</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>Kolkata,India</li>
+                    <li><a href="mailto:contact@learnhyve.com">contact@learnhyve.com</a></li>
+                    <li><a href="mailto:support@learnhyve.com">Support@learnhyve.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.facebook.com/people/Learnhyve/61561398463423/">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/learnhyve_app/">Instagram</a></li>
+                    <li><a href="https://x.com/learnhyve_app">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© LearnHyve. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.stat-item, .history-content').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

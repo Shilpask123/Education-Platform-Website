@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Hyve</title>
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body class="relative dark:bg-black dark:text-white">
+  <nav class="nav">
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <img src="logoblack.png" alt="">
+        </a>
+        <div class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="Features.html">Features</a>
+            <a href="worshop.html">Workshops</a>
+            <a href="blog.html">Blogs</a>
+            <a href="about.html">About</a>
+            <button onclick="window.location.href='contact.html';" class="contact-btn">Contact Us</button>
+        </div>
+        <div class="menu-toggle">☰</div>
+    </div>
+</nav>
+
+  <!---end navigation bar--->
+
+  <!-- Main Section -->
+  <main>
+    <section class="blog-section">
+      <h1>Latest Blog Posts</h1>
+      <div class="blog-container">
+        <!-- Blog Card 1 -->
+        <div class="blog-card">
+          <img class="blog-image" src="hardskill.jpeg" alt="Hard Skills">
+          <h2>Hard Skills vs. Soft Skills: What's the Difference?</h2>
+          <p>Hard skills are related to specific technical knowledge and training, while soft skills are behavioral traits such as leadership, communication...</p>
+          <a href="SoftHardSkills.html" class="read-more">Read More &gt;</a>
+        </div>
+        <!-- Blog Card 2 -->
+        <div class="blog-card">
+          <img class="blog-image" src="success.jpeg" alt="Success">
+          <h2>5 Habits of Successful Students</h2>
+          <p>Discover the key habits that set successful students apart and learn how to implement them in your own academic journey.</p>
+          <a href="Habit.html" class="read-more">Read More &gt;</a>
+        </div>
+        <!-- Blog Card 3 -->
+        <div class="blog-card">
+          <img class="blog-image" src="digital.jpeg" alt="Digital">
+          <h2>The Future of Learning: Digital Transformation</h2>
+          <p>Explore how digital technologies are reshaping education and what it means for learners and educators alike.</p>
+          <a href="After12.html" class="read-more">Read More &gt;</a>
+        </div>
+        <!-- Blog Card 4 -->
+        <div class="blog-card">
+          <img class="blog-image" src="future.jpeg" alt="Future Ready">
+          <h2>The Essential Skills for a Future-Ready Career</h2>
+          <p>Critical Thinking is the ability to analyze information objectively and make reasoned judgments.</p>
+          <a href="EssentialSkills.html" class="read-more">Read More &gt;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="foot-container">
+      <div class="footer-grid">
+        <!-- Footer Brand -->
+        <div>
+          <a href="blog.html" class="foot-brand">
+            <img class="foot-logo" src="logoblack.png" alt="LearnHyve Logo">
+          </a>
+          <p class="foot-description">Revolutionizing education for a skilled India. Join us to empower learners with essential real-world skills.</p>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="Features.html" class="footer-link">Features</a></li>
+            <li><a href="worshop.html" class="footer-link">Workshops</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div>
+          <h3 class="footer-heading">Contact Us</h3>
+          <address class="footer-address">
+            Kolkata,India<br>
+            <a href="mailto:contact@learnhyve.com" class="footer-contact">contact@learnhyve.com</a><br>
+            <a href="mailto:Support@learnhyve.com" class="footer-contact">Support@learnhyve.com</a>
+          </address>
+        </div>
+        <!-- Social Links -->
+        <div>
+          <h3 class="footer-heading">Follow Us</h3>
+          <div class="foot-social-links">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Instagram</a>
+            <a href="#" class="social-icon">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> LearnHyve. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-container')) {
+                navLinks.classList.remove('active');
+            }
+        });
+  </script>
+</body>
+</html>

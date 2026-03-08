@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Trainer.css">
+   
+</head>
+<body class="relative dark:bg-black dark:text-white">
+  <nav class="nav">
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <img src="logoblack.png" alt="">
+        </a>
+        <div class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="Features.html">Features</a>
+            <a href="worshop.html">Workshops</a>
+            <a href="blog.html">Blogs</a>
+            <a href="about.html">About</a>
+            <button onclick="window.location.href='contact.html';" class="contact-btn">Contact Us</button>
+        </div>
+        <div class="menu-toggle">☰</div>
+    </div>
+</nav>   
+  <!---end navigation bar--->
+
+<!---start guide section-->
+<div class="container_g">
+    <div class="img_g">
+        <img src="atoz.png" alt="not found" width=150% height=150% >
+    </div>
+    
+    <div class="content_g">
+      <h1>Guiding You Towards Success <span>with Knowledge and Experience:</span></h1>
+      <p>Embrace your passion for education and make a meaningful impact! Join us to shape the future of our youth and play a vital role in building a brighter tomorrow for our country.</p>
+      <form class="button-center" action="https://docs.google.com/forms/d/e/1FAIpQLSfWaI-stPzalGTIJoHzqGN70AWUwsPGpEEQLYoS1KmLO34SHg/viewform">
+        <button type="submit" >Start Here</button>
+      </form>
+    </div>
+  </div>
+<!--end guide section-->
+
+<!---start trainer details-->
+<div class="trainer"> 
+  <h1>Meet Our Expert Trainers</h1> 
+  <!-- Card Container to Hold Both Cards -->
+  <div class="card-container">
+    <!-- First Card for Richard Perris -->
+    <div class="card">
+      <img src="Richard.jpg" alt="Richard Perris">
+      <b>Richard Perris</b>
+      <div class="content">
+        <p class="title">
+          <h3>Richard Perris</h3>
+          <h4>Life Skills Trainer</h4>
+        </p>
+        <p class="description">Richard is a professional and experienced trainer with 16 years of experience. He has trained lots of students and loves to help the next generation for their future.</p>
+      </div>
+    </div>
+    <!-- Second Card for Ankita Majumder -->
+    <div class="card">
+      <img src="ankita.jpg" alt="Ankita Majumder">
+      <b>Ankita Majumder</b>
+      <div class="content">
+        <p class="title">
+          <h3>Ankita Majumder</h3>
+          <h4>Life Skills Trainer</h4>
+        </p>
+        <p class="description">Ankita is a very friendly trainer with 5 years of experience. She has trained lots of students and loves to train them in a very friendly way.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!---end of trainer details-->
+
+ <!--start 3 benefits sliders-->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide engage">
+                <i class="fas fa-clock"></i>
+                <h1>Part-Time Benefit</h1>
+                <p id="p">You don't have to work 9-5 full time. You can work according to your free timings.</p>
+            </div>
+            <div class="slide learn">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h1>Training</h1>
+                <p id="p">Unlike others we provide training before works so that if you're fresher you can work.</p>
+            </div>
+            <div class="slide achieve">
+                <i class="fas fa-coins"></i>
+                <h1>Unlimited Earnings</h1>
+                <p id="p">We never limit your earning. How many classes you will take, you will get payment.</p>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <div class="dot active" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+            <div class="dot" data-index="2"></div>
+        </div>
+    </div>
+ <!---end 3 benefits sliders-->
+
+<!--Start Send Message-->
+<div class="contact-us">
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Kolkata, </div>
+          <div class="text-two">India</div>
+        </div>
+        <div class="phone details">
+          <i class="fa fa-globe"></i>
+          <div class="topic">Website</div>
+          <div class="text-one"><a href="" style="color: gray; text-decoration-line: none;">www.learnhyve.com</a></div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one"><a href="mailto:contact@learnhyve.com" style="color: gray; text-decoration-line: none;">contact@learnhyve.com</a></div>
+          <div class="text-two"> <a href="mailto:Support@learnhyve.com" style="color: gray; text-decoration-line: none;">Support@learnhyve.com</a></div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Share your ideas via message</div>
+        <p>
+          Have suggestions or feedback? Drop us a quick message using the form below, and let’s make great things happen together!🙂.
+        </p>
+        <form 
+          id="contact-form"
+          onsubmit="handleSubmit(event)"
+        >
+          <div class="input-box">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+              pattern=".{2,}"
+              title="Name must be at least 2 characters long"
+            />
+          </div>
+          <div class="input-box">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter a valid email"
+              required
+              title="Enter a valid email address"
+            />
+          </div>
+          <div class="input-box message-box">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="We’d love to hear your thoughts!"
+            ></textarea>
+          </div>
+          <div class="button">
+            <input type="submit" value="Send Now" />
+          </div>
+        </form>
+        <!-- Success Message -->
+        <div
+          id="success-message"
+          style="display: none; margin-top: 15px; color: green; font-weight: bold;"
+        >
+          Your submission was successful.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---End of Send Message-->
+
+  <!-- start the Footer -->
+  <footer class="footer bg-secondary">
+    <div class="foot-container">
+      <div class="footer-grid">
+        <!-- Brand and Description -->
+        <div>
+          <a href="/" class="foot-brand">
+            <img class="foot-logo" src="logoblack.png" alt="learnhyve-logo"/>
+          </a>
+          <p class="foot-description">
+            Revolutionizing education for a skilled India. Join us in our mission to empower learners with essential real-world skills.
+          </p>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="Home.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="Features.html" class="footer-link">Features</a></li>
+            <li><a href="worshop.html" class="footer-link">Workshops</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Contact Information -->
+        <div>
+          <h3 class="footer-heading">Contact Us</h3>
+          <address class="footer-address">
+            Kolkata,India<br>
+            <a href="mailto:contact@learnhyve.com" class="footer-contact">contact@learnhyve.com</a><br>
+            <a href="mailto:Support@learnhyve.com" class="footer-contact">Support@learnhyve.com</a>
+          </address>
+        </div>
+        <!-- Social Media Links -->
+        <div>
+          <h3 class="footer-heading">Follow Us</h3>
+          <div class="foot-social-links">
+            <a href="https://www.facebook.com/profile.php?id=61561398463423" class="social-icon" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/learnhyve_app/" class="social-icon" target="_blank">Instagram</a>
+            <a href="https://x.com/learnhyve_app" class="social-icon" target="_blank">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> LearnHyve. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>    
+<!--end of footer-->
+
+<script>
+//---start Main_Navbar---
+const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+  });
+
+        // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-container')) {
+        navLinks.classList.remove('active');
+      }
+  });
+//--end Main_bar---
+
+//--start 3 slides of benefits script---
+const slider = document.querySelector('.slider');
+const dots = document.querySelectorAll('.dot');
+let index = 0;
+
+function moveSlider(newIndex) {
+    index = newIndex !== undefined ? newIndex : (index + 1) % dots.length;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+}
+
+dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => moveSlider(i));
+});
+
+setInterval(() => moveSlider(), 4000);
+//--end of 3 slides of benefits script--
+
+
+//------start send message--
+function handleSubmit(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Display the success message
+  document.getElementById("success-message").style.display = "block";
+
+  // Clear the form fields but keep the form visible
+  document.getElementById("contact-form").reset();
+}
+//------end of send message--
+
+
+//--start footer section--
+document.addEventListener("DOMContentLoaded", () => {
+    const yearSpan = document.getElementById("year");
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+  });
+  //--end footer section--
+
+</script>
+ 
+ </body>   
+</html>
